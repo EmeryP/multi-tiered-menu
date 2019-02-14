@@ -14,7 +14,17 @@ export default class Header extends React.Component {
             <img src={logo} />
           </span>
           <div className="hamburgerMenu">
-            <HamburgerMenu menuClicked={this.props.clicker} isOpen={this.props.open} width={44} height={25} strokeWidth={3} color="white" rotate={0} borderRadius={5} animationDuration={.4}/>
+            <HamburgerMenu
+              menuClicked={this.props.clickBurger}
+              isOpen={this.props.open}
+              width={44}
+              height={25}
+              strokeWidth={3}
+              color="white"
+              rotate={0}
+              borderRadius={5}
+              animationDuration={0.4}
+            />
           </div>
         </div>
       </React.Fragment>

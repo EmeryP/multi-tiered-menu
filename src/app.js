@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Header from '../src/components/header/header.js';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <p>save to reload....</p>
-      </div>
+      <React.Fragment>
+        <Header />
+      </React.Fragment>
     );
   }
 }

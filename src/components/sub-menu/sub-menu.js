@@ -1,5 +1,4 @@
 import React from 'react';
-// import menu from '../../assets/menu.json';
 import If from '../../lib/if.js';
 import SubDropdown from '../sub-dropdown/sub-dropdown.js';
 
@@ -21,17 +20,19 @@ export default class SubMenu extends React.Component {
       openDdId: i,
       openDdItem: liItem
     }));
-    // console.log(this.state.menuToOpen)
+    console.log(this.state.openDd)
   };
 
   render() {
-    // console.log(this.props.subOpen, 'opensub');
+    // console.log(this.props.openSub, 'opensub');
     let subMenuClass = 'sub-menu-normal';
     // console.log(this.props.show, 'show');
 
     if (this.props.openSub) {
       subMenuClass = 'sub-menu-normal open';
     }
+    console.log(this.props.openSub)
+
     const menuArrow = (
       <span>
         <svg
@@ -70,8 +71,6 @@ export default class SubMenu extends React.Component {
                       {menuArrow}
                     </a>
                   </If>
-                </li>
-              ))}
             <If condition={this.state.openDd}>
               <SubDropdown
                 openDd={this.state.openDd}
@@ -79,6 +78,8 @@ export default class SubMenu extends React.Component {
                 openDdItem={this.state.openDdItem}
               />
             </If>
+            </li>
+              ))}
           </ul>
           <div className="filler" />
         </div>

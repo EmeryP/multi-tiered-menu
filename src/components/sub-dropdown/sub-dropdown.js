@@ -1,6 +1,4 @@
 import React from 'react';
-// import menu from '../../assets/menu.json';
-// import If from '../../lib/if.js';
 
 import './sub-dropdown.css';
 
@@ -11,7 +9,7 @@ export default class SubDropdown extends React.Component {
   }
 
   render() {
-    console.log(this.props.openDdItem.children);
+    // console.log(this.props.openDdItem.children);
     return (
       <React.Fragment>
         <div className="subDropdownMain">
@@ -20,10 +18,10 @@ export default class SubDropdown extends React.Component {
               this.props.openDdItem.children.map((listItem, idx) => (
                 <li
                   key={idx}
-                  className="subMenuList"
+                  className="subDropdownMain"
                   onClick={this.handleClick}
                 >
-                  <span className="subMenuTitle">{listItem.name}</span>
+                  <span className="subDdTitle">{listItem.name}</span>
                 </li>
               ))}
           </ul>

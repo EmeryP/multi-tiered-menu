@@ -32,12 +32,12 @@ export default class MainMenu extends React.Component {
   };
 
   render() {
-    // console.log(this.props.show)
     let menuClass = 'menu-normal';
 
     if (this.props.show) {
       menuClass = 'menu-normal open';
     }
+    console.log(this.props.show, 'main');
 
     const menuArrow = (
       <span>
@@ -78,7 +78,7 @@ export default class MainMenu extends React.Component {
                 </If>
               </li>
             ))}
-            <If condition={this.state.openSub}>
+            <If condition={this.state.openSub || this.props.show}>
               <SubMenu
                 openSubId={this.state.openSubId}
                 openSub={this.state.openSub}

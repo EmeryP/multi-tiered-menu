@@ -1,6 +1,6 @@
 import React from 'react';
 import If from '../../lib/if.js';
-import SubDropdown from '../sub-dropdown/sub-dropdown.js';
+// import SubDropdown from '../sub-dropdown/sub-dropdown.js';
 
 import './sub-menu.css';
 
@@ -20,18 +20,20 @@ export default class SubMenu extends React.Component {
       openDdId: i,
       openDdItem: liItem
     }));
-    console.log(this.state.openDd)
+    // console.log(this.state.openDd);
   };
 
   render() {
-    // console.log(this.props.openSub, 'opensub');
     let subMenuClass = 'sub-menu-normal';
-    // console.log(this.props.show, 'show');
+    let subDdClass = 'sub-dropdown-normal';
 
     if (this.props.openSub) {
       subMenuClass = 'sub-menu-normal open';
     }
-    console.log(this.props.openSub)
+    if (this.state.openDd) {
+      subDdClass = 'sub-dropdown-normal open';
+    }
+    console.log(this.state.openDdItem.id, 'openDd')
 
     const menuArrow = (
       <span>
@@ -59,7 +61,7 @@ export default class SubMenu extends React.Component {
               this.props.openSubItem.children.map((listItem, idx) => (
                 <li
                   key={idx}
-                  className="subMenuList"
+                  className='subMenuList'
                   onClick={() => this.handleClick(idx, listItem)}
                 >
                   <span className="subMenuTitle">{listItem.name}</span>
@@ -70,16 +72,30 @@ export default class SubMenu extends React.Component {
                     >
                       {menuArrow}
                     </a>
+                    {/* <If condition={this.state.openDd}> */}
+                    <div>
+                      <ul className={subDdClass}>
+                        {this.state.openDdItem.children &&
+                          this.state.openDdItem.children.map(
+                            (listItem, idx) => (
+                              <li key={idx} className="subDropdownMain">
+                                {listItem.name}
+                              </li>
+                            )
+                          )}
+                      </ul>
+                    </div>
                   </If>
-            <If condition={this.state.openDd}>
+                  {/* </If> */}
+                </li>
+              ))}
+            {/* <If condition={this.state.openDd}>
               <SubDropdown
                 openDd={this.state.openDd}
                 openDdId={this.state.openDdId}
                 openDdItem={this.state.openDdItem}
               />
-            </If>
-            </li>
-              ))}
+            </If> */}
           </ul>
           <div className="filler" />
         </div>

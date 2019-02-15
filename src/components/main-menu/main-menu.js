@@ -24,20 +24,13 @@ export default class MainMenu extends React.Component {
     }));
   };
 
-  selectedList = () => {
-    //compare the list item that was selected with the list items available
-    //highlight the list item that was selected to be white
-    //push that list items children to an array
-    //map over that array and display the subMenu with those items as the li's
-  };
-
   render() {
     let menuClass = 'menu-normal';
 
     if (this.props.show) {
       menuClass = 'menu-normal open';
     }
-    console.log(this.props.show, 'main');
+    // console.log(this.props.show, 'main');
 
     const menuArrow = (
       <span>

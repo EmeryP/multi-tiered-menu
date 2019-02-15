@@ -10,3 +10,18 @@
   height: 65px;
   line-height: 65px;
 }
+
+.sub-dropdown-normal{
+  transform: translateY(132px);
+  transition: transform 0.4s ease-in-out;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.sub-dropdown-normal.open{
+  transform: translateY(100%);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}

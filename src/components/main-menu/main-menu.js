@@ -1,6 +1,7 @@
 import React from 'react';
 import menu from '../../assets/menu.json';
 import If from '../../lib/if.js';
+import Welcome from '../welcome/welcome.js';
 
 import './main-menu.css';
 
@@ -11,9 +12,9 @@ export default class MainMenu extends React.Component {
   }
 
   render() {
-    let menuClasses = 'menu-normal';
+    let menuClass = 'menu-normal';
     if (this.props.show) {
-      menuClasses = 'menu-normal open';
+      menuClass = 'menu-normal open';
     }
 
     // let menuTierOne = 'menu-tier-one-normal';
@@ -38,11 +39,12 @@ export default class MainMenu extends React.Component {
     );
 
     return (
-      <div className={menuClasses}>
-        <ul>
-          {menu.children.map((listItem, idx) => (
-            <li key={idx} className="listButton">
-              <div className="faded">
+      <React.Fragment>
+        <div className={menuClass}>
+          <Welcome />
+          <ul>
+            {menu.children.map((listItem, idx) => (
+              <li key={idx} className="mainMenuList">
                 <span className="listIcon">
                   <img src="" alt={listItem.name.slice(0, 1)} />
                 </span>
@@ -56,11 +58,11 @@ export default class MainMenu extends React.Component {
                     {menuArrow}
                   </a>
                 </If>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </React.Fragment>
     );
   }
 }

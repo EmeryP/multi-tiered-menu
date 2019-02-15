@@ -14,7 +14,8 @@ ul {
   z-index: 100;
   width: 100%;
 }
-li {
+.mainMenuList {
+  width: 100%;
   border-bottom: 1px solid #9ec4e7;
   padding: 0.2em;
   list-style-type: none;
@@ -22,9 +23,8 @@ li {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  line-height: 30px;
   height: 65px;
-  width: 100%;
+  line-height: 30px;
 }
 
 .listIcon img {
@@ -34,23 +34,14 @@ li {
   margin: 15px;
 }
 
-.listButton {
-  width: 100%;
-}
-
 .subMenuArrow {
-  border: 1px solid white;
-  /* width: 65px; */
-  /* height: 70px; */
-  /* position: absolute; */
-  /* right: 0px; */
-  /* padding-right: 0px;  */
-  /* margin-left: ; */
-  display: inline-block;
-  /* top: 0px; */
-}
-.subMenuArrow:hover{
-  background: rgba(0,0,0,0.2)
+  background: #9ec4e7;
+  color: white;
+  width: 65px;
+  height: 65px;
+  float: right;
+  position: fixed;
+  right: 0px;
 }
 
 .menu-normal {
@@ -77,19 +68,6 @@ li {
   width: 87%;
   top: 0px;
 }
-
-
-
-/* .listButton a {
-  position: absolute;
-  right: 5px;
-  z-index: 0;
-} */
-
-/* .tierOneArrow a {
-  position: absolute;
-  right: 5px;
-} */
 
 @keyframes fadein {
   from {

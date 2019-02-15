@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Header from "../src/components/header/header.js";
+import React, { Component } from 'react';
+import Header from '../src/components/header/header.js';
 import Breadcrumb from '../src/components/breadcrumb/breadcrumb.js';
 import MainMenu from '../src/components/main-menu/main-menu.js';
 
@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: true
+      open: false
     };
   }
 

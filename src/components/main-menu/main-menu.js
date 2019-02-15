@@ -2,25 +2,36 @@ import React from 'react';
 import menu from '../../assets/menu.json';
 import If from '../../lib/if.js';
 import Welcome from '../welcome/welcome.js';
+import SubMenu from '../sub-menu/sub-menu.js';
 
 import './main-menu.css';
 
 export default class MainMenu extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      openSub: false,
+      openSubId: '',
+      openSubItem: false
+    };
   }
+
+  handleClick = (i, liItem) => {
+    this.setState(prevState => ({
+      openSub: !prevState.openSub,
+      openSubId: i,
+      openSubItem: liItem
+    }));
+  };
 
   render() {
     let menuClass = 'menu-normal';
+
     if (this.props.show) {
       menuClass = 'menu-normal open';
     }
+    // console.log(this.props.show, 'main');
 
-    // let menuTierOne = 'menu-tier-one-normal';
-    // if (this.state.liOneState) {
-    //   menuTierOne = 'menu-tier-one-normal open';
-    // }
     const menuArrow = (
       <span>
         <svg
@@ -44,23 +55,31 @@ export default class MainMenu extends React.Component {
           <Welcome />
           <ul>
             {menu.children.map((listItem, idx) => (
-              <li key={idx} className="mainMenuList">
+              <li
+                key={idx}
+                onClick={() => this.handleClick(idx, listItem)}
+                className="mainMenuList"
+              >
                 <span className="listIcon">
                   <img src="" alt={listItem.name.slice(0, 1)} />
                 </span>
                 {listItem.name.toUpperCase()}
                 <If condition={listItem.children}>
-                  <a
-                    className="subMenuArrow"
-                    href={listItem.link}
-                    onClick={this.handleClick}
-                  >
+                  <a className="menuArrow" href={menu.children.link}>
                     {menuArrow}
                   </a>
                 </If>
               </li>
             ))}
+            <If condition={this.state.openSub || this.props.show}>
+              <SubMenu
+                openSubId={this.state.openSubId}
+                openSub={this.state.openSub}
+                openSubItem={this.state.openSubItem}
+              />
+            </If>
           </ul>
+          <div className="fillerMain" />
         </div>
       </React.Fragment>
     );

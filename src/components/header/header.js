@@ -11,7 +11,7 @@ export default class Header extends React.Component {
       <React.Fragment>
         <div className="header">
           <span>
-            <img src={logo} />
+            <img src={logo} alt="" />
           </span>
           <div className="hamburgerMenu">
             <HamburgerMenu

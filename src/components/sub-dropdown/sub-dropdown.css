@@ -1,0 +1,27 @@
+.subDropdownMain{
+  width: 100%;
+  border-bottom: 1px solid #9ec4e7;
+  border-left: 1px solid #9ec4e7;
+  list-style-type: none;
+  background: #2774ae;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  height: 65px;
+  line-height: 65px;
+}
+
+.sub-dropdown-normal{
+  transform: translateY(132px);
+  transition: transform 0.4s ease-in-out;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.sub-dropdown-normal.open{
+  transform: translateY(100%);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}

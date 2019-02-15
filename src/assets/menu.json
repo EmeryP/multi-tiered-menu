@@ -1,0 +1,166 @@
+{
+  "header": "All Categories",
+  "children": [
+    {
+      "name": "My Schedule & Bidding",
+      "id": 0,
+      "link": "/my-schedule-and-bidding",
+      "children": [
+        {
+          "name": "Schedule",
+          "id": 11,
+          "link": null,
+          "children": []
+        },
+        {
+          "name": "Bidding",
+          "id": 12,
+          "link": null,
+          "children": []
+        },
+        {
+          "name": "Bids",
+          "id": 13,
+          "link": "/my-schedule-and-bidding/bids",
+          "children": [
+            {
+              "name": "American Airlines",
+              "id": 101,
+              "link": null,
+              "children": null
+            },
+            {
+              "name": "Delta Airlines",
+              "id": 102,
+              "link": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Safety",
+      "id": 1,
+      "link": "/services",
+      "children": [
+        {
+          "name": "Reporting",
+          "id": 21,
+          "link": null,
+          "children": []
+        },
+        {
+          "name": "Agricultural and Customs",
+          "id": 22,
+          "link": null,
+          "children": []
+        },
+        {
+          "name": "Know Crewmember",
+          "id": 23,
+          "link": null,
+          "children": []
+        },
+        {
+          "name": "Product Safety Data Search",
+          "id": 24,
+          "link": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Training",
+      "id": 2,
+      "link": "/training",
+      "children": null
+    },
+    {
+      "name": "Administration",
+      "id": 3,
+      "link": "/administration",
+      "children": [
+        {
+          "name": "OJI and Leaves",
+          "id": 31,
+          "link": "/administration/oji-and-leaves",
+          "children": []
+        },
+        {
+          "name": "Pay and Benefits",
+          "id": 32,
+          "link": "/administration/pay-and-benefits",
+          "children": []
+        },
+        {
+          "name": "Performance",
+          "id": 33,
+          "link": "/administration/performance",
+          "children": []
+        },
+        {
+          "name": "Inflight Resource Directory",
+          "id": 34,
+          "link": "/administration/inflight-resource-directory",
+          "children": null
+        },
+        {
+          "name": "Mobile and Web",
+          "id": 35,
+          "link": "/administration/mobile-and-web",
+          "children": []
+        },
+        {
+          "name": "AFA",
+          "id": 36,
+          "link": "/administration/afa",
+          "children": null
+        }
+      ]
+    },
+    {
+      "name": "Catering & Brand",
+      "id": 4,
+      "link": "/catering-and-brand",
+      "children": [
+        {
+          "name": "Catering",
+          "id": 41,
+          "link": "/catering-and-brand/catering",
+          "children": []
+        },
+        {
+          "name": "Brand",
+          "id": 42,
+          "link": "/catering-and-brand/brand",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Hotels",
+      "id": 5,
+      "link": "/hotels",
+      "children": null
+    },
+    {
+      "name": "My Base",
+      "id": 6,
+      "link": "/my-base",
+      "children": null
+    },
+    {
+      "name": "Recognition",
+      "id": 7,
+      "link": "/recognition",
+      "children": null
+    },
+    {
+      "name": "My Leadership Team",
+      "id": 8,
+      "link": "/my-leadership-team",
+      "children": null
+    }
+  ]
+}

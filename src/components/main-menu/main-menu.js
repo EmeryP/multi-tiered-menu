@@ -10,20 +10,18 @@ export default class MainMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      subMenuOpen: false,
-      menuToOpen: '',
-      listColorFlip: '',
-      liOpened: false
+      openSub: false,
+      openSubId: '',
+      openSubItem: false
     };
   }
 
   handleClick = (i, liItem) => {
     this.setState(prevState => ({
-      subMenuOpen: !prevState.subMenuOpen,
-      menuToOpen: i,
-      liOpened: liItem
+      openSub: !prevState.openSub,
+      openSubId: i,
+      openSubItem: liItem
     }));
-    // console.log(this.state.menuToOpen)
   };
 
   selectedList = () => {
@@ -80,11 +78,11 @@ export default class MainMenu extends React.Component {
                 </If>
               </li>
             ))}
-            <If condition={this.state.subMenuOpen}>
+            <If condition={this.state.openSub}>
               <SubMenu
-                menuOpened={this.state.menuToOpen}
-                subOpen={this.state.subMenuOpen}
-                liOpened={this.state.liOpened}
+                openSubId={this.state.openSubId}
+                openSub={this.state.openSub}
+                openSubItem={this.state.openSubItem}
               />
             </If>
           </ul>

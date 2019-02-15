@@ -1,18 +1,25 @@
 import React from 'react';
 // import menu from '../../assets/menu.json';
 import If from '../../lib/if.js';
+import SubDropdown from '../sub-dropdown/sub-dropdown.js';
 
 import './sub-menu.css';
 
 export default class SubMenu extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      openDd: false,
+      openDdId: '',
+      openDdItem: ''
+    };
   }
 
   handleClick = (i, liItem) => {
     this.setState(prevState => ({
-      subMenuOpen: !prevState.subMenuOpen
+      openDd: !prevState.openDd,
+      openDdId: i,
+      openDdItem: liItem
     }));
     // console.log(this.state.menuToOpen)
   };
@@ -22,7 +29,7 @@ export default class SubMenu extends React.Component {
     let subMenuClass = 'sub-menu-normal';
     // console.log(this.props.show, 'show');
 
-    if (this.props.subOpen) {
+    if (this.props.openSub) {
       subMenuClass = 'sub-menu-normal open';
     }
     const menuArrow = (
@@ -46,22 +53,32 @@ export default class SubMenu extends React.Component {
       <React.Fragment>
         <div className={subMenuClass}>
           <ul>
-            <li className="subMenuList">{this.props.liOpened.name}</li>
-            {this.props.liOpened.children &&
-              this.props.liOpened.children.map((listItem, idx) => (
-                <li key={idx} className="subMenuList">
+            <li className="subMenuList">{this.props.openSubItem.name}</li>
+            {this.props.openSubItem.children &&
+              this.props.openSubItem.children.map((listItem, idx) => (
+                <li
+                  key={idx}
+                  className="subMenuList"
+                  onClick={() => this.handleClick(idx, listItem)}
+                >
                   <span className="subMenuTitle">{listItem.name}</span>
                   <If condition={listItem.children}>
                     <a
                       className="subMenuArrow"
-                      href={this.props.liOpened.link}
-                      onClick={this.handleClick}
+                      href={this.props.openSubItem.link}
                     >
                       {menuArrow}
                     </a>
                   </If>
                 </li>
               ))}
+            <If condition={this.state.openDd}>
+              <SubDropdown
+                openDd={this.state.openDd}
+                openDdId={this.state.openDdId}
+                openDdItem={this.state.openDdItem}
+              />
+            </If>
           </ul>
           <div className="filler" />
         </div>

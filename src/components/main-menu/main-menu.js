@@ -2,25 +2,45 @@ import React from 'react';
 import menu from '../../assets/menu.json';
 import If from '../../lib/if.js';
 import Welcome from '../welcome/welcome.js';
+import SubMenu from '../sub-menu/sub-menu.js';
 
 import './main-menu.css';
 
 export default class MainMenu extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      subMenuOpen: false,
+      menuToOpen: '',
+      listColorFlip: '',
+      liOpened: false
+    };
   }
 
+  handleClick = (i, liItem) => {
+    this.setState(prevState => ({
+      subMenuOpen: !prevState.subMenuOpen,
+      menuToOpen: i,
+      liOpened: liItem
+    }));
+    // console.log(this.state.menuToOpen)
+  };
+
+  selectedList = () => {
+    //compare the list item that was selected with the list items available
+    //highlight the list item that was selected to be white
+    //push that list items children to an array
+    //map over that array and display the subMenu with those items as the li's
+  };
+
   render() {
+    // console.log(this.props.show)
     let menuClass = 'menu-normal';
+
     if (this.props.show) {
       menuClass = 'menu-normal open';
     }
 
-    // let menuTierOne = 'menu-tier-one-normal';
-    // if (this.state.liOneState) {
-    //   menuTierOne = 'menu-tier-one-normal open';
-    // }
     const menuArrow = (
       <span>
         <svg
@@ -44,23 +64,31 @@ export default class MainMenu extends React.Component {
           <Welcome />
           <ul>
             {menu.children.map((listItem, idx) => (
-              <li key={idx} className="mainMenuList">
+              <li
+                key={idx}
+                onClick={() => this.handleClick(idx, listItem)}
+                className="mainMenuList"
+              >
                 <span className="listIcon">
                   <img src="" alt={listItem.name.slice(0, 1)} />
                 </span>
                 {listItem.name.toUpperCase()}
                 <If condition={listItem.children}>
-                  <a
-                    className="subMenuArrow"
-                    href={listItem.link}
-                    onClick={this.handleClick}
-                  >
+                  <a className="menuArrow" href={menu.children.link}>
                     {menuArrow}
                   </a>
                 </If>
               </li>
             ))}
+            <If condition={this.state.subMenuOpen}>
+              <SubMenu
+                menuOpened={this.state.menuToOpen}
+                subOpen={this.state.subMenuOpen}
+                liOpened={this.state.liOpened}
+              />
+            </If>
           </ul>
+          <div className="fillerMain" />
         </div>
       </React.Fragment>
     );

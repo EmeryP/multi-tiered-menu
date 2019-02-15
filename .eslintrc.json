@@ -24,13 +24,13 @@
   },
   "rules": {
     "no-console": "off",
-    "no-unused-vars": [1, {"vars": "local", "args": "none"}],
-    "indent": [ "error", 2, { "SwitchCase": 1 } ],
+    "no-unused-vars": [1, { "vars": "local", "args": "none" }],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "react/prop-types": [0],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
-    "space-infix-ops": ["error", {"int32Hint": false}],
+    "space-infix-ops": ["error", { "int32Hint": false }],
     "comma-dangle": ["error", "always-multiline"],
-    "semi": [ "error", "always" ]
+    "semi": ["error", "always"]
   },
   "plugins": ["react"]
 }

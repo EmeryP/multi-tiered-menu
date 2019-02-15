@@ -10,7 +10,7 @@
           "name": "Schedule",
           "id": 11,
           "link": null,
-          "children": []
+          "children": null
         },
         {
           "name": "Bidding",
@@ -42,7 +42,7 @@
     {
       "name": "Safety",
       "id": 1,
-      "link": "/services",
+      "link": "/safety",
       "children": [
         {
           "name": "Reporting",
@@ -60,13 +60,13 @@
           "name": "Know Crewmember",
           "id": 23,
           "link": null,
-          "children": []
+          "children": null
         },
         {
           "name": "Product Safety Data Search",
           "id": 24,
           "link": null,
-          "children": []
+          "children": null
         }
       ]
     },

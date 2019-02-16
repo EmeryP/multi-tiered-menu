@@ -52,25 +52,25 @@
             {
               "name": "I-21 Injury Reporting",
               "id": 101,
-              "link": null,
+              "link": "/safety/i-21-injury-reporting",
               "children": null
             },
             {
               "name": "ASAP Reporting",
               "id": 101,
-              "link": null,
+              "link": "/safety/asap-reporting",
               "children": null
             },
             {
               "name": "General ASAP Reporting",
               "id": 101,
-              "link": null,
+              "link": "/safety/general-asap-reporting",
               "children": null
             },
             {
               "name": "Flight Attendant Incident Report",
               "id": 101,
-              "link": null,
+              "link": "/safety/flight-attendant-incident-report",
               "children": null
             }
           ]

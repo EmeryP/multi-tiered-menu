@@ -22,6 +22,7 @@ export default class MainMenu extends React.Component {
       openSubId: i,
       openSubItem: liItem
     }));
+    console.log(i, liItem);
   };
 
   render() {
@@ -33,7 +34,7 @@ export default class MainMenu extends React.Component {
     // console.log(this.props.show, 'main');
 
     const menuArrow = (
-      <span>
+      <span className="arrow">
         <svg
           stroke="currentColor"
           fill="currentColor"

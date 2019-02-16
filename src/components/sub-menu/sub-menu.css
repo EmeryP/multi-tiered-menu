@@ -51,6 +51,13 @@ body {
 .arrowSub {
   margin: 25px 12px;
   transform: rotate(90deg);
+  transition:  0.3s ease-in-out;
+}
+
+.arrowSubClick {
+  margin: 25px 12px;
+  transform: rotate(-90deg);
+  transition:  0.3s ease-in-out;
 }
 
 .subMenuTitle {

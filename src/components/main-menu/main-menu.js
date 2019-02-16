@@ -14,15 +14,23 @@ export default class MainMenu extends React.Component {
       openSubId: '',
       openSubItem: false
     };
+    this.handleClick = this.handleClick.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   handleClick = (i, liItem) => {
     this.setState(prevState => ({
-      openSub: !prevState.openSub,
       openSubId: i,
       openSubItem: liItem
     }));
-    console.log(i, liItem);
+    this.handleClose();
+    // console.log(i, liItem);
+  };
+
+  handleClose = () => {
+    this.setState(prevState => ({
+      openSub: !prevState.openSub
+    }));
   };
 
   render() {
@@ -74,6 +82,7 @@ export default class MainMenu extends React.Component {
             ))}
             <If condition={this.state.openSub || this.props.show}>
               <SubMenu
+                toggleSub={this.handleClose}
                 openSubId={this.state.openSubId}
                 openSub={this.state.openSub}
                 openSubItem={this.state.openSubItem}

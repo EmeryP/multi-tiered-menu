@@ -19,6 +19,19 @@ body {
   line-height: 65px;
 }
 
+.subMenuListSlide {
+  width: 100%;
+  border-bottom: 1px solid #9ec4e7;
+  border-left: 1px solid #9ec4e7;
+  list-style-type: none;
+  background: #2774ae;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  height: 65px;
+  line-height: 65px;
+}
+
 .subMenuArrow {
   background: #9ec4e7;
   color: white;
@@ -56,7 +69,6 @@ body {
 
 .subDropdownMain{
   width: 100%;
-  border-bottom: 1px solid #9ec4e7;
   border-top: 1px solid #9ec4e7;
   list-style-type: none;
   background: #4384b6;
@@ -64,12 +76,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   height: 65px;
+  line-height: 65px;
 }
 
 .sub-dropdown-normal{
-  transform: translateY(0);
-  /* z-index: 1; */
+  transform: translateY(-100%);
   opacity: 0;
+  z-index: -1;
   transition: transform 0.4s ease-in-out;
   position: relative;
   width: 100%;
@@ -77,25 +90,25 @@ body {
 
 .sub-dropdown-normal.open{
   transform: translateY(0);
+  transition: opacity 0.5s ease;
   opacity: 1;
-  /* z-index: 1; */
+  z-index: 1;
   position: relative;
   width: 100%;
 }
 
-.moveItDown{
-  transform: translateY(-100px);
-  /* z-index: 1; */
+/* .slider-normal{
+  transform: translateY(0);
   opacity: 1;
   transition: transform 0.4s ease-in-out;
   position: relative;
   width: 100%;
 }
 
-/* .moveItDown.open{
-  transform: translateY(-500px);
+.slider-normal.open{
+  transform: translateY(130px);
   opacity: 1;
-  z-index: 1;
   position: relative;
   width: 100%;
+  background: red;
 } */

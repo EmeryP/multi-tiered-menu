@@ -26,14 +26,16 @@ export default class SubMenu extends React.Component {
   render() {
     let subMenuClass = 'sub-menu-normal';
     let subDdClass = 'sub-dropdown-normal';
+    // let sliderClass = 'slider-normal';
 
     if (this.props.openSub) {
       subMenuClass = 'sub-menu-normal open';
     }
     if (this.state.openDd) {
       subDdClass = 'sub-dropdown-normal open';
+      // sliderClass = 'slider-normal open';
     }
-    console.log(this.state.openDdItem.id, 'openDd')
+    // console.log(this.state.openDdItem.id, 'openDd');
 
     const menuArrow = (
       <span>
@@ -57,11 +59,12 @@ export default class SubMenu extends React.Component {
         <div className={subMenuClass}>
           <ul>
             <li className="subMenuList">{this.props.openSubItem.name}</li>
+
             {this.props.openSubItem.children &&
               this.props.openSubItem.children.map((listItem, idx) => (
                 <li
                   key={idx}
-                  className='subMenuList'
+                  className="subMenuList"
                   onClick={() => this.handleClick(idx, listItem)}
                 >
                   <span className="subMenuTitle">{listItem.name}</span>
@@ -73,22 +76,20 @@ export default class SubMenu extends React.Component {
                       {menuArrow}
                     </a>
                     {/* <If condition={this.state.openDd}> */}
-                    <div>
-                      <ul className={subDdClass}>
-                        {this.state.openDdItem.children &&
-                          this.state.openDdItem.children.map(
-                            (listItem, idx) => (
-                              <li key={idx} className="subDropdownMain">
-                                {listItem.name}
-                              </li>
-                            )
-                          )}
-                      </ul>
-                    </div>
+                    <ul className={subDdClass}>
+                      {this.state.openDdItem.children &&
+                        this.state.openDdItem.children.map((listItem, idx) => (
+                          <li key={idx} className="subDropdownMain">
+                            {listItem.name}
+                          </li>
+                        ))}
+                    </ul>
                   </If>
                   {/* </If> */}
                 </li>
               ))}
+            {/* <li className={"subMenuList slider-normal " + (this.state.openDd ? 'open' : '')}>TestOne</li>
+              <li className={"subMenuList slider-normal " + (this.state.openDd ? 'open' : '')}>TestTwo</li> */}
             {/* <If condition={this.state.openDd}>
               <SubDropdown
                 openDd={this.state.openDd}

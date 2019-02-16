@@ -4,6 +4,7 @@ html {
 
 body {
   overflow-y: hidden;
+  width: 100%
 }
 
 .subMenuList {
@@ -14,15 +15,18 @@ body {
   background: #2774ae;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: bold;   
   height: 65px;
   line-height: 65px;
 }
 
 .subMenuList.heading {
-  padding-left: 20px;
   background: #7fb6e9;
   text-transform: uppercase;
+}
+
+.menuNameAtSub{
+  padding-left: 20px;
 }
 
 .subMenuCloseBtn {
@@ -67,7 +71,7 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-.arrowSubClick {
+.arrowSubUp {
   margin: 25px 12px;
   transform: rotate(-90deg);
   transition: 0.3s ease-in-out;
@@ -90,6 +94,7 @@ body {
   position: absolute;
   top: 125px;
   width: 100%;
+  transition: all 1s linear;
 }
 
 .filler {

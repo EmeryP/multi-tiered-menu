@@ -24,7 +24,6 @@ export default class MainMenu extends React.Component {
       openSubItem: liItem
     }));
     this.handleClose();
-    // console.log(i, liItem);
   };
 
   handleClose = () => {
@@ -39,7 +38,6 @@ export default class MainMenu extends React.Component {
     if (this.props.show) {
       menuClass = 'menu-normal open';
     }
-    // console.log(this.props.show, 'main');
 
     const menuArrow = (
       <span className="arrow">
@@ -64,22 +62,45 @@ export default class MainMenu extends React.Component {
           <Welcome />
           <ul>
             {menu.children.map((listItem, idx) => (
-              <li key={idx} className="mainMenuList">
+              <li
+                key={idx}
+                className={
+                  'mainMenuList ' +
+                  (this.state.openSub && this.state.openSubId === idx
+                    ? 'colorChange'
+                    : '')
+                }
+              >
                 <button
                   disabled={!this.state.openSub}
                   onClick={() => this.handleClick(idx, listItem)}
-                  className="listIconButton"
+                  className={
+                    'listIconButton ' +
+                    (this.state.openSub && this.state.openSubId === idx
+                      ? 'colorChange'
+                      : '')
+                  }
                 >
                   <img
                     src=""
                     alt={listItem.name.slice(0, 1)}
-                    className="listIconImg"
+                    className={
+                      'listIconImg ' +
+                      (this.state.openSub && this.state.openSubId === idx
+                        ? 'colorChangeImg'
+                        : '')
+                    }
                   />
                 </button>
                 {listItem.name.toUpperCase()}
                 <If condition={listItem.children}>
                   <button
-                    className="menuArrow"
+                    className={
+                      'menuArrow ' +
+                      (this.state.openSub && this.state.openSubId === idx
+                        ? 'colorChange'
+                        : '')
+                    }
                     onClick={() => this.handleClick(idx, listItem)}
                   >
                     {menuArrow}
@@ -87,8 +108,14 @@ export default class MainMenu extends React.Component {
                 </If>
               </li>
             ))}
-            <If condition={this.state.openSub || this.props.show}>
+            <If condition={this.state.openSub && this.props.show}>
               <SubMenu
+              className={
+                      'sub-menu-normal ' +
+                      (this.state.openSub && this.props.show
+                        ? 'open'
+                        : '')
+                    }
                 toggleSub={this.handleClose}
                 openSubId={this.state.openSubId}
                 openSub={this.state.openSub}

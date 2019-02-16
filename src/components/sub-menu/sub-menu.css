@@ -25,6 +25,18 @@ body {
   text-transform: uppercase;
 }
 
+.subMenuCloseBtn {
+  background: #7fb6e9;
+  color: white;
+  width: 65px;
+  height: 65px;
+  position: fixed;
+  right: 65px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
 .subMenuListSlide {
   width: 100%;
   border-bottom: 1px solid #2881d4;
@@ -46,18 +58,19 @@ body {
   float: right;
   position: fixed;
   right: 65px;
+  border: none;
+  outline: none;
 }
 
 .arrowSub {
-  margin: 25px 12px;
   transform: rotate(90deg);
-  transition:  0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .arrowSubClick {
   margin: 25px 12px;
   transform: rotate(-90deg);
-  transition:  0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .subMenuTitle {

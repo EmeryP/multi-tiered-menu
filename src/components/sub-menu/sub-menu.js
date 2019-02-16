@@ -46,7 +46,7 @@ export default class SubMenu extends React.Component {
           viewBox="0 0 320 512"
           attr="[object Object]"
           data="[object Object]"
-          height="1em"
+          height="2em"
           width="1em"
           className={arrowClass}
         >
@@ -62,8 +62,9 @@ export default class SubMenu extends React.Component {
             <li className="subMenuList heading">
               {this.props.openSubItem.name}
               <button
+              className='subMenuCloseBtn'
               onClick={() => this.props.toggleSub()}
-              >X</button>
+              >&#10005;</button>
             </li>
 
             {this.props.openSubItem.children &&

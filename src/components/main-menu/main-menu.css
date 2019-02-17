@@ -15,6 +15,7 @@ ul {
   z-index: 100;
   width: 100%;
 }
+
 .mainMenuList {
   width: 100%;
   border-bottom: 1px solid #9ec4e7;
@@ -63,7 +64,7 @@ ul {
 .colorChange {
   background: white;
   color: #2774ae;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 .colorChangeImg {
@@ -81,7 +82,7 @@ ul {
   transform: translateX(0);
   width: 100%;
   animation: fadein 2s;
-  transition: all .4s linear;
+  transition: all 0.4s linear;
 }
 
 .sub-menu-normal {
@@ -105,7 +106,6 @@ ul {
   background: #2774ae;
   padding-top: 0px;
 }
-
 
 @keyframes fadein {
   from {

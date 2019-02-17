@@ -1,6 +1,5 @@
 import React from 'react';
 import If from '../../lib/if.js';
-
 import './sub-menu.css';
 
 export default class SubMenu extends React.Component {
@@ -32,7 +31,6 @@ export default class SubMenu extends React.Component {
     if (this.state.openDd) {
       subDdClass = 'sub-dropdown-normal open';
     }
-    // console.log(this.state.openDdItem.id, this.state.openDdId, this.state.openDd, this.state.openDdItem.children);
 
     let subMenuOptions =
       this.props.openSubItem.children &&
@@ -83,10 +81,9 @@ export default class SubMenu extends React.Component {
           </React.Fragment>
         );
 
-        // let subDropdown;
+        // let subDropdown; recursive option
         // if (listItem.children && idx === this.state.openDd) {
         //   subDropdown = this.subMenuOptions(listItem);
-        //   console.log(subDropdown);
         // }
 
         return (
@@ -99,7 +96,7 @@ export default class SubMenu extends React.Component {
     return (
       <React.Fragment>
         <div className={subMenuClass}>
-          <ul>
+          <ul className="subUlMaster">
             <li className="subMenuList heading">
               <span className="menuNameAtSub">
                 {this.props.openSubItem.name}

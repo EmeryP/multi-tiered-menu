@@ -40,7 +40,7 @@ export default class SubMenu extends React.Component {
         const subMenu = (
           <React.Fragment>
             <span className="subMenuTitle">{listItem.name}</span>
-            <span className="newArrow" />
+            <span className="newArrow"/>
             <If condition={listItem.children}>
               <button
                 className="subMenuArrow"
@@ -99,7 +99,7 @@ export default class SubMenu extends React.Component {
     return (
       <React.Fragment>
         <div className={subMenuClass}>
-          <ul>
+          <ul className='subUlMaster'>
             <li className="subMenuList heading">
               <span className="menuNameAtSub">
                 {this.props.openSubItem.name}

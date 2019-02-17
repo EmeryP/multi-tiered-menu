@@ -6,7 +6,6 @@ body {
   overflow-x: hidden;
   width: 100%;
   margin: 0px;
-  /* animation: fadein 2s; */
 }
 
 ul {
@@ -81,7 +80,7 @@ ul {
 .menu-normal.open {
   transform: translateX(0);
   width: 100%;
-  /* animation: fadein 2s; */
+  animation: fadein 2s;
   transition: all .4s linear;
 }
 

@@ -18,9 +18,9 @@ export default class MainMenu extends React.Component {
     this.handleClose = this.handleClose.bind(this);
   }
 
-  handleClick = (i, liItem) => {
+  handleClick = (idx, liItem) => {
     this.setState(prevState => ({
-      openSubId: i,
+      openSubId: idx,
       openSubItem: liItem
     }));
     this.handleClose();
@@ -56,66 +56,66 @@ export default class MainMenu extends React.Component {
       </span>
     );
 
+    let mainMenu = menu.children.map((listItem, idx) => (
+      <li
+        key={idx}
+        className={
+          'mainMenuList ' +
+          (this.state.openSub && this.state.openSubId === idx
+            ? 'colorChange'
+            : '')
+        }
+      >
+        <button
+          disabled={!this.state.openSub}
+          onClick={() => this.handleClick(idx, listItem)}
+          className={
+            'listIconButton ' +
+            (this.state.openSub && this.state.openSubId === idx
+              ? 'colorChange'
+              : '')
+          }
+        >
+          <img
+            src=""
+            alt={listItem.name.slice(0, 1)}
+            className={
+              'listIconImg ' +
+              (this.state.openSub && this.state.openSubId === idx
+                ? 'colorChangeImg'
+                : '')
+            }
+          />
+        </button>
+        {listItem.name.toUpperCase()}
+        <If condition={listItem.children}>
+          <button
+            className={
+              'menuArrow ' +
+              (this.state.openSub && this.state.openSubId === idx
+                ? 'colorChange'
+                : '')
+            }
+            onClick={() => this.handleClick(idx, listItem)}
+          >
+            {menuArrow}
+          </button>
+        </If>
+      </li>
+    ));
+
     return (
       <React.Fragment>
         <div className={menuClass}>
           <Welcome />
           <ul>
-            {menu.children.map((listItem, idx) => (
-              <li
-                key={idx}
-                className={
-                  'mainMenuList ' +
-                  (this.state.openSub && this.state.openSubId === idx
-                    ? 'colorChange'
-                    : '')
-                }
-              >
-                <button
-                  disabled={!this.state.openSub}
-                  onClick={() => this.handleClick(idx, listItem)}
-                  className={
-                    'listIconButton ' +
-                    (this.state.openSub && this.state.openSubId === idx
-                      ? 'colorChange'
-                      : '')
-                  }
-                >
-                  <img
-                    src=""
-                    alt={listItem.name.slice(0, 1)}
-                    className={
-                      'listIconImg ' +
-                      (this.state.openSub && this.state.openSubId === idx
-                        ? 'colorChangeImg'
-                        : '')
-                    }
-                  />
-                </button>
-                {listItem.name.toUpperCase()}
-                <If condition={listItem.children}>
-                  <button
-                    className={
-                      'menuArrow ' +
-                      (this.state.openSub && this.state.openSubId === idx
-                        ? 'colorChange'
-                        : '')
-                    }
-                    onClick={() => this.handleClick(idx, listItem)}
-                  >
-                    {menuArrow}
-                  </button>
-                </If>
-              </li>
-            ))}
+            {mainMenu}
             <If condition={this.state.openSub && this.props.show}>
               <SubMenu
-              className={
-                      'sub-menu-normal ' +
-                      (this.state.openSub && this.props.show
-                        ? 'open'
-                        : '')
-                    }
+                className={
+                  'sub-menu-normal ' +
+                  (this.state.openSub && this.props.show ? 'open' : '')
+                }
                 toggleSub={this.handleClose}
                 openSubId={this.state.openSubId}
                 openSub={this.state.openSub}

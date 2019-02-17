@@ -46,12 +46,16 @@ body {
   border-bottom: 1px solid #2881d4;
   border-left: 1px solid #9ec4e7;
   list-style-type: none;
-  background: #2774ae;
+  background: red;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   height: 65px;
   line-height: 65px;
+  z-index: 100;
+  transform: translateY(calc(65px * 4));
+  transition: transform 1s ease-in-out;
+  display: none;
 }
 
 .subMenuArrow {
@@ -88,6 +92,7 @@ body {
   top: 125px;
   width: 100%;
 }
+
 
 .sub-menu-normal.open {
   transform: translateX(65px);
@@ -134,6 +139,20 @@ body {
   width: 100%;
 }
 
+.testingBlock > li {
+  background-color:red; 
+  display:block;
+}
+
+.testingBlock > ul > li {
+  display:none;
+}
+
+.testingBlock > li:hover + ul > li{
+  background-color:green; 
+  display:block;
+}
+
 /* .slider-normal{
   transform: translateY(0);
   opacity: 1;
@@ -142,7 +161,7 @@ body {
   width: 100%;
 }
 
-.slider-normal.open{
+.slider-open{
   transform: translateY(130px);
   opacity: 1;
   position: relative;

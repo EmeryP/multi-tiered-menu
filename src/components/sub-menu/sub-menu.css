@@ -4,6 +4,7 @@ html {
 
 body {
   overflow-y: hidden;
+  width: 100%
 }
 
 .subMenuList {
@@ -14,9 +15,47 @@ body {
   background: #2774ae;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;   
+  height: 65px;
+  line-height: 65px;
+}
+
+.subMenuList.heading {
+  background: #7fb6e9;
+  text-transform: uppercase;
+}
+
+.menuNameAtSub{
+  padding-left: 20px;
+}
+
+.subMenuCloseBtn {
+  background: #7fb6e9;
+  color: white;
+  width: 65px;
+  height: 65px;
+  position: fixed;
+  right: 65px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.subMenuListSlide {
+  width: 100%;
+  border-bottom: 1px solid #2881d4;
+  border-left: 1px solid #9ec4e7;
+  list-style-type: none;
+  background: red;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   height: 65px;
   line-height: 65px;
+  z-index: 100;
+  transform: translateY(calc(65px * 4));
+  transition: transform 1s ease-in-out;
+  display: none;
 }
 
 .subMenuArrow {
@@ -27,10 +66,23 @@ body {
   float: right;
   position: fixed;
   right: 65px;
+  border: none;
+  outline: none;
+}
+
+.arrowSub {
+  transform: rotate(90deg);
+  transition: 0.3s ease-in-out;
+}
+
+.arrowSubUp {
+  margin: 25px 12px;
+  transform: rotate(-90deg);
+  transition: 0.3s ease-in-out;
 }
 
 .subMenuTitle {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .sub-menu-normal {
@@ -41,11 +93,13 @@ body {
   width: 100%;
 }
 
+
 .sub-menu-normal.open {
   transform: translateX(65px);
   position: absolute;
   top: 125px;
   width: 100%;
+  transition: all 1s linear;
 }
 
 .filler {
@@ -54,9 +108,8 @@ body {
   border-left: 1px solid #9ec4e7;
 }
 
-.subDropdownMain{
+.subDropdownMain {
   width: 100%;
-  border-bottom: 1px solid #9ec4e7;
   border-top: 1px solid #9ec4e7;
   list-style-type: none;
   background: #4384b6;
@@ -64,38 +117,54 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   height: 65px;
+  line-height: 65px;
+  padding-left: 50px;
 }
 
-.sub-dropdown-normal{
-  transform: translateY(0);
-  /* z-index: 1; */
+.sub-dropdown-normal {
+  transform: translateY(-100%);
   opacity: 0;
+  z-index: -1;
   transition: transform 0.4s ease-in-out;
   position: relative;
   width: 100%;
 }
 
-.sub-dropdown-normal.open{
+.sub-dropdown-normal.open {
   transform: translateY(0);
-  opacity: 1;
-  /* z-index: 1; */
-  position: relative;
-  width: 100%;
-}
-
-.moveItDown{
-  transform: translateY(-100px);
-  /* z-index: 1; */
-  opacity: 1;
-  transition: transform 0.4s ease-in-out;
-  position: relative;
-  width: 100%;
-}
-
-/* .moveItDown.open{
-  transform: translateY(-500px);
+  transition: opacity 0.5s ease;
   opacity: 1;
   z-index: 1;
   position: relative;
   width: 100%;
+}
+
+.testingBlock > li {
+  background-color:red; 
+  display:block;
+}
+
+.testingBlock > ul > li {
+  display:none;
+}
+
+.testingBlock > li:hover + ul > li{
+  background-color:green; 
+  display:block;
+}
+
+/* .slider-normal{
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.4s ease-in-out;
+  position: relative;
+  width: 100%;
+}
+
+.slider-open{
+  transform: translateY(130px);
+  opacity: 1;
+  position: relative;
+  width: 100%;
+  background: red;
 } */

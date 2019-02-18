@@ -16,3 +16,12 @@ img {
   margin-left: 1em;
   display: inline-block;
 }
+
+.welcomeHeader {
+  color: white;
+  font-family: 'Kalam', cursive;
+  font-size: 1.3em;
+  position: absolute;
+  margin-left: 15px;
+  top: 15px;
+}

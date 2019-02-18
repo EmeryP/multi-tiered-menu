@@ -1,8 +1,6 @@
 import React from 'react';
 import logo from '../../assets/alaska-airlines-logo.png';
-
 import HamburgerMenu from 'react-hamburger-menu';
-
 import './header.css';
 
 export default class Header extends React.Component {
@@ -13,6 +11,7 @@ export default class Header extends React.Component {
           <span>
             <img src={logo} alt="" />
           </span>
+          <span className="welcomeHeader">welcomes you!</span>
           <div className="hamburgerMenu">
             <HamburgerMenu
               menuClicked={this.props.clickBurger}

@@ -1,4 +1,4 @@
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 950px) {
   html {
     width: 100%;
   }
@@ -127,7 +127,7 @@
   }
 }
 
-/* below styles screen when width < 750px */
+/* below styles screen when width < 950px */
 html {
   width: 100%;
 }
@@ -162,7 +162,7 @@ body {
   text-transform: uppercase;
   border-bottom: none;
   padding-bottom: 1px;
-  height: 5em;
+  height: 81px;
   display: block;
 }
 

@@ -6,7 +6,7 @@ export default class Welcome extends React.Component {
     return (
       <React.Fragment>
         <div className="welcome">
-          <p>Hello Emery!</p>
+          <p>Hello Friend!</p>
         </div>
       </React.Fragment>
     );

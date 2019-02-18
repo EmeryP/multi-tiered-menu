@@ -86,7 +86,7 @@ export default class SubMenu extends React.Component {
           </React.Fragment>
         );
 
-        // let subDropdown; recursive option
+        // let subDropdown; recursive option (ref)
         // if (listItem.children && idx === this.state.openDd) {
         //   subDropdown = this.subMenuOptions(listItem);
         // }

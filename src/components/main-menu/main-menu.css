@@ -1,6 +1,9 @@
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 950px) {
   html {
     width: 100%;
+    background: url('../../assets/beach.jpeg');
+    height: 100vh;
+    background-size: cover;
   }
 
   body {
@@ -11,12 +14,13 @@
 
   ul {
     padding-left: 0px;
-    margin-top: 0px;
+    margin-top: 48px;
     margin-bottom: 0px;
-    width: 45%;
+    width: 40%;
     position: fixed;
     right: 0px;
     border-left: 1px solid #9ec4e7;
+    border-top: 1px solid #9ec4e7;
   }
 
   .mainMenuList {
@@ -27,8 +31,8 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    height: 5em;
-    line-height: 5em;
+    height: 81px;
+    line-height: 81px;
   }
 
   .listIconImg {
@@ -47,8 +51,8 @@
   .listIconButton {
     border: none;
     background: #2774ae;
-    height: 5em;
-    width: 5em;
+    height: 78px;
+    width: 78px;
     margin-right: 1.5em;
     outline: none;
     font-size: 1vw;
@@ -57,8 +61,8 @@
   .menuArrow {
     background: #9ec4e7;
     color: white;
-    width: 7.3em;
-    height: 7.3em;
+    width: 81px;
+    height: 81px;
     float: right;
     position: fixed;
     right: 0px;
@@ -99,7 +103,7 @@
   }
 
   .sub-menu-normal.open {
-    transform: translateX(65px);
+    transform: translateX(75px);
     position: absolute;
     top: 125px;
     width: 100%;
@@ -113,19 +117,20 @@
     position: fixed;
     z-index: -1;
     right: 0px;
-    width: 45%;
+    width: 40%;
   }
 }
 
-/* below styles screen when width < 750px */
+/* below styles screen when width < 950px */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 950px) {
   html {
     width: 100%;
   }
 
   body {
     overflow-x: hidden;
+    overflow-y: scroll;
     width: 100%;
     margin: 0px;
   }
@@ -146,6 +151,7 @@
     font-weight: bold;
     height: 5em;
     line-height: 5em;
+    height: 81px;
   }
 
   .listIconImg {
@@ -173,8 +179,8 @@
   .menuArrow {
     background: #9ec4e7;
     color: white;
-    width: 7.3em;
-    height: 7.3em;
+    width: 81px;
+    height: 81px;
     float: right;
     position: fixed;
     right: 0px;

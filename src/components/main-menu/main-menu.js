@@ -19,10 +19,10 @@ export default class MainMenu extends React.Component {
   }
 
   handleClick = (idx, liItem) => {
-    this.setState(prevState => ({
+    this.setState({
       openSubId: idx,
       openSubItem: liItem
-    }));
+    });
     this.handleClose();
   };
 
@@ -116,6 +116,7 @@ export default class MainMenu extends React.Component {
                   'sub-menu-normal ' +
                   (this.state.openSub && this.props.show ? 'open' : '')
                 }
+                mainHandleClick={this.handleClick}
                 toggleSub={this.handleClose}
                 openSubId={this.state.openSubId}
                 openSub={this.state.openSub}

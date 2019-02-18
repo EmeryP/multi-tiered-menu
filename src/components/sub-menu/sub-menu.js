@@ -41,7 +41,12 @@ export default class SubMenu extends React.Component {
             <span className="newArrow" />
             <If condition={listItem.children}>
               <button
-                className="subMenuArrow"
+                className={
+                  'subMenuArrow ' +
+                  (this.state.openDd && this.state.openDdId === idx
+                    ? 'colorChangeSubArrow'
+                    : '')
+                }
                 onClick={() => this.handleClick(idx, listItem)}
               >
                 <span className="arrowSub">
@@ -87,7 +92,15 @@ export default class SubMenu extends React.Component {
         // }
 
         return (
-          <li key={idx} className="subMenuList">
+          <li
+            key={idx}
+            className={
+              'subMenuList ' +
+              (this.state.openDd && this.state.openDdId === idx
+                ? 'colorChangeMenuList'
+                : '')
+            }
+          >
             {subMenu}
           </li>
         );

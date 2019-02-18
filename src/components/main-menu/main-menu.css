@@ -1,117 +1,246 @@
-html {
-  width: 100%;
-}
-
-body {
-  overflow-x: hidden;
-  width: 100%;
-  margin: 0px;
-}
-
-ul {
-  padding-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  z-index: 100;
-  width: 100%;
-}
-
-.mainMenuList {
-  width: 100%;
-  border-bottom: 1px solid #9ec4e7;
-  list-style-type: none;
-  background: #2774ae;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  height: 65px;
-  line-height: 30px;
-}
-
-.listIconImg {
-  border: 1px solid white;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  height: 32.5px;
-  width: 32.5px;
-  font-size: 14px;
-  margin: 5px;
-  margin-right: 20px;
-  line-height: 32.5px;
-}
-
-.listIconButton {
-  border: none;
-  background: #2774ae;
-  height: 65px;
-  width: 65px;
-  outline: none;
-}
-
-.menuArrow {
-  background: #9ec4e7;
-  color: white;
-  width: 65px;
-  height: 65px;
-  float: right;
-  position: fixed;
-  right: 0px;
-  outline: none;
-  border: none;
-}
-
-.colorChange {
-  background: white;
-  color: #2774ae;
-  transition: all 0.4s ease;
-}
-
-.colorChangeImg {
-  background: white;
-  color: #2774ae;
-  border: 1px solid lightgray;
-}
-
-.menu-normal {
-  transform: translateX(-100%);
-  transition: transform 0.4s ease-in-out;
-}
-
-.menu-normal.open {
-  transform: translateX(0);
-  width: 100%;
-  animation: fadein 2s;
-  transition: all 0.4s linear;
-}
-
-.sub-menu-normal {
-  transform: translateX(+100%);
-  transition: transform 0.4s ease-in-out;
-  position: absolute;
-  top: 125px;
-  width: 100%;
-}
-
-.sub-menu-normal.open {
-  transform: translateX(65px);
-  position: absolute;
-  top: 125px;
-  width: 100%;
-  transition: all 1s linear;
-}
-
-.fillerMain {
-  height: 10000px;
-  background: #2774ae;
-  padding-top: 0px;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
+@media screen and (min-width: 750px) {
+  html {
+    width: 100%;
   }
-  to {
-    opacity: 1;
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0px;
+  }
+
+  ul {
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 45%;
+    position: fixed;
+    right: 0px;
+    border-left: 1px solid #9ec4e7;
+  }
+
+  .mainMenuList {
+    width: 100%;
+    border-bottom: 1px solid #9ec4e7;
+    list-style-type: none;
+    background: #2774ae;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    height: 5em;
+    line-height: 5em;
+  }
+
+  .listIconImg {
+    border: 1px solid white;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    height: 2.5em;
+    width: 2.5em;
+    font-size: 14px;
+    margin: 5px;
+    margin-right: 20px;
+    line-height: 2.5em;
+  }
+
+  .listIconButton {
+    border: none;
+    background: #2774ae;
+    height: 5em;
+    width: 5em;
+    margin-right: 1.5em;
+    outline: none;
+    font-size: 1vw;
+  }
+
+  .menuArrow {
+    background: #9ec4e7;
+    color: white;
+    width: 7.3em;
+    height: 7.3em;
+    float: right;
+    position: fixed;
+    right: 0px;
+    outline: none;
+    border: none;
+  }
+
+  .colorChange {
+    background: white;
+    color: #2774ae;
+    transition: all 0.4s ease;
+  }
+
+  .colorChangeImg {
+    background: white;
+    color: #2774ae;
+    border: 1px solid lightgray;
+  }
+
+  .menu-normal {
+    transform: translateX(+100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .menu-normal.open {
+    transform: translateX(0);
+    width: 100%;
+    animation: fadein 0.4s;
+    /* transition: all 0.4s linear; */
+  }
+
+  .sub-menu-normal {
+    transform: translateX(+100%);
+    transition: transform 0.4s ease-in-out;
+    position: absolute;
+    top: 125px;
+    width: 100%;
+  }
+
+  .sub-menu-normal.open {
+    transform: translateX(65px);
+    position: absolute;
+    top: 125px;
+    width: 100%;
+    display: block;
+  }
+
+  .fillerMain {
+    height: 1000px;
+    background: #2774ae;
+    padding-top: 0px;
+    position: fixed;
+    z-index: -1;
+    right: 0px;
+    width: 45%;
+  }
+}
+
+/* below styles screen when width < 750px */
+
+@media screen and (max-width: 750px) {
+  html {
+    width: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0px;
+  }
+
+  ul {
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+
+  .mainMenuList {
+    width: 100%;
+    border-bottom: 1px solid #9ec4e7;
+    background: #2774ae;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    height: 5em;
+    line-height: 5em;
+  }
+
+  .listIconImg {
+    border: 1px solid white;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    height: 2.5em;
+    width: 2.5em;
+    font-size: 14px;
+    margin: 5px;
+    margin-right: 20px;
+    line-height: 2.5em;
+  }
+
+  .listIconButton {
+    border: none;
+    background: #2774ae;
+    height: 5em;
+    width: 5em;
+    margin-right: 1.5em;
+    outline: none;
+  }
+
+  .menuArrow {
+    background: #9ec4e7;
+    color: white;
+    width: 7.3em;
+    height: 7.3em;
+    float: right;
+    position: fixed;
+    right: 0px;
+    outline: none;
+    border: none;
+  }
+
+  .colorChange {
+    background: white;
+    color: #2774ae;
+    transition: all 0.4s ease;
+  }
+
+  .colorChangeImg {
+    background: white;
+    color: #2774ae;
+    border: 1px solid lightgray;
+  }
+
+  .menu-normal {
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .menu-normal.open {
+    transform: translateX(0);
+    width: 100%;
+    animation: fadein 0.4s;
+  }
+
+  .sub-menu-normal {
+    transform: translateX(+100%);
+    transition: transform 0.4s ease-in-out;
+    position: absolute;
+    top: 125px;
+    width: 100%;
+  }
+
+  .sub-menu-normal.open {
+    transform: translateX(65px);
+    position: absolute;
+    top: 125px;
+    width: 100%;
+    display: block;
+  }
+
+  .fillerMain {
+    height: 1000px;
+    background: #2774ae;
+    padding-top: 0px;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
 }

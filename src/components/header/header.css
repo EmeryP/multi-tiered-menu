@@ -1,16 +1,16 @@
-.header{
+.header {
   background: #01426a;
   color: white;
   line-height: 48px;
 }
 
-.hamburgerMenu{
+.hamburgerMenu {
   position: absolute;
   right: 1em;
   top: 1.4em;
 }
 
-img{
+img {
   height: 2em;
   margin-top: 1em;
   margin-left: 1em;

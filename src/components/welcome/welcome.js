@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './welcome.css';
 
 export default class Welcome extends React.Component {
@@ -7,7 +6,7 @@ export default class Welcome extends React.Component {
     return (
       <React.Fragment>
         <div className="welcome">
-          <p>Hello Emery Parks</p>
+          <p>Hello Emery!</p>
         </div>
       </React.Fragment>
     );

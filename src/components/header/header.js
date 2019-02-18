@@ -17,9 +17,9 @@ export default class Header extends React.Component {
             <HamburgerMenu
               menuClicked={this.props.clickBurger}
               isOpen={this.props.open}
-              width={44}
+              width={40}
               height={25}
-              strokeWidth={3}
+              strokeWidth={5}
               color="white"
               rotate={0}
               borderRadius={5}

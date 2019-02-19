@@ -8,28 +8,28 @@
   }
 
   .subUlMaster {
-    padding-left: 0px;
+    border: none;
     margin-top: 0px;
     margin-bottom: 0px;
-    width: 100%;
+    padding-left: 0px;
     position: absolute;
     right: 0px;
     top: -125px;
-    border: none;
+    width: 100%;
   }
 
   .subMenuList {
-    width: 100%;
-    border-bottom: 1px solid #9ec4e7;
-    list-style-type: none;
     background: #2774ae;
     color: white;
+    border-bottom: 1px solid #9ec4e7;
+    display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     height: 100%;
+    list-style-type: none;
     line-height: 65px;
     position: relative;
-    display: block;
+    width: 100%;
   }
 
   .subMenuList.colorChangeMenuList {
@@ -38,39 +38,39 @@
 
   .subMenuList.heading {
     background: #539ed8;
-    text-transform: uppercase;
     border-bottom: none;
-    padding-bottom: 1px;
-    height: 81px;
     display: block;
+    height: 81px;
+    padding-bottom: 1px;
+    text-transform: uppercase;
   }
 
   .menuNameAtSub {
-    padding-left: 1.5em;
     line-height: 5em;
+    padding-left: 1.5em;
   }
 
   .subMenuCloseBtn {
     background: #539ed8;
+    border: none;
     color: white;
+    font-size: 20px;
+    outline: none;
     position: absolute;
     right: 4.7em;
     top: 1.4em;
-    border: none;
-    outline: none;
-    font-size: 20px;
   }
 
   .subMenuArrow {
     background: #2774ae;
+    border: none;
     color: white;
-    width: 7.5em;
-    height: 65px;
     float: right;
+    height: 65px;
+    outline: none;
     position: fixed;
     right: 65px;
-    border: none;
-    outline: none;
+    width: 7.5em;
   }
 
   .subMenuArrow.colorChangeSubArrow {
@@ -93,22 +93,22 @@
   }
 
   .filler {
-    height: 100%;
     background: #2774ae;
     border-left: 1px solid #9ec4e7;
+    height: 100%;
     order: 99;
   }
 
   .subDropdownMain {
-    width: 100%;
-    border-top: 1px solid #9ec4e7;
     background: #7fb6e9;
+    border-top: 1px solid #9ec4e7;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    padding-left: 50px;
-    display: block;
     font-size: 1.75vw;
+    display: block;
+    padding-left: 50px;
+    width: 100%;
   }
 }
 
@@ -122,18 +122,18 @@ body {
 }
 
 .subMenuList {
-  width: 100%;
+  background: #2774ae;
   border-bottom: 1px solid #9ec4e7;
   border-left: 1px solid #9ec4e7;
-  list-style-type: none;
-  background: #2774ae;
   color: white;
+  display: block;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
   font-weight: bold;
+  list-style-type: none;
   line-height: 65px;
   position: relative;
-  display: block;
-  font-size: 14px;
+  width: 100%;
 }
 
 .subMenuList.colorChangeMenuList {
@@ -142,39 +142,39 @@ body {
 
 .subMenuList.heading {
   background: #539ed8;
-  text-transform: uppercase;
   border-bottom: none;
-  padding-bottom: 1px;
-  height: 81px;
   display: block;
+  height: 81px;
+  padding-bottom: 1px;
+  text-transform: uppercase;
 }
 
 .menuNameAtSub {
-  padding-left: 1.5em;
   line-height: 5em;
+  padding-left: 1.5em;
 }
 
 .subMenuCloseBtn {
   background: #539ed8;
+  border: none;
   color: white;
+  font-size: 20px;
+  outline: none;
   position: absolute;
   right: 4.7em;
   top: 1.4em;
-  border: none;
-  outline: none;
-  font-size: 20px;
 }
 
 .subMenuArrow {
   background: #2774ae;
+  border: none;
   color: white;
-  width: 7.5em;
-  height: 65px;
   float: right;
+  height: 65px;
+  outline: none;
   position: fixed;
   right: 65px;
-  border: none;
-  outline: none;
+  width: 7.5em;
 }
 
 .subMenuArrow.colorChangeSubArrow {
@@ -197,33 +197,32 @@ body {
 }
 
 .filler {
-  height: 1000px;
   background: #2774ae;
   border-left: 1px solid #9ec4e7;
+  height: 612px;
   order: 99;
 }
 
 .subDropdownMain {
-  width: 100%;
-  border-top: 1px solid #9ec4e7;
   background: #7fb6e9;
+  border-top: 1px solid #9ec4e7;
   color: white;
+  display: block;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
   font-weight: bold;
   padding-left: 50px;
-  display: block;
-  font-size: 14px;
+  width: 100%;
 }
 
 .sub-dropdown-normal {
   display: none;
-  width: 100%;
   height: 0;
-  transition: all 1s ease;
+  width: 100%;
 }
 
 .sub-dropdown-normal.open {
+  display: contents;
   height: 100%;
   width: 100%;
-  display: contents;
 }

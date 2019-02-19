@@ -110,11 +110,11 @@ export default class MainMenu extends React.Component {
           <Welcome />
           <ul className="mainUl">
             {mainMenu}
-            <If condition={this.state.openSub && this.props.show}>
+            <If condition={this.state.openSub || this.props.show}>
               <SubMenu
                 className={
                   'sub-menu-normal ' +
-                  (this.state.openSub && this.props.show ? 'open' : '')
+                  (this.state.openSub || this.props.show ? 'open' : '')
                 }
                 mainHandleClick={this.handleClick}
                 toggleSub={this.handleClose}

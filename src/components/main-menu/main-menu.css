@@ -4,6 +4,7 @@
     overflow-x: auto;
     overflow-y: -webkit-paged-x;
   }
+
   html {
     width: 100%;
     /* background: url('../../assets/beach.jpeg'); */
@@ -12,19 +13,19 @@
   }
 
   body {
-    width: 100%;
     margin: 0px;
+    width: 100%;
   }
 
   ul {
-    padding-left: 0px;
-    margin-top: 48px;
-    margin-bottom: 0px;
-    width: 40%;
-    position: fixed;
-    right: 0px;
     border-left: 1px solid #9ec4e7;
     border-top: 1px solid #9ec4e7;
+    margin-top: 48px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    position: fixed;
+    right: 0px;
+    width: 40%;
   }
 
   .mainUl {
@@ -32,15 +33,15 @@
   }
 
   .mainMenuList {
-    width: 100%;
-    border-bottom: 1px solid #9ec4e7;
-    list-style-type: none;
     background: #2774ae;
+    border-bottom: 1px solid #9ec4e7;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     height: 81px;
+    list-style-type: none;
     line-height: 81px;
+    width: 100%;
   }
 
   .listIconImg {
@@ -48,34 +49,34 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    height: 2.5em;
-    width: 2.5em;
     font-size: 14px;
+    height: 2.5em;
+    line-height: 2.5em;
     margin: 5px;
     margin-right: 20px;
-    line-height: 2.5em;
+    width: 2.5em;
   }
 
   .listIconButton {
-    border: none;
     background: #2774ae;
+    border: none;
+    font-size: 1vw;
     height: 78px;
-    width: 78px;
     margin-right: 1.5em;
     outline: none;
-    font-size: 1vw;
+    width: 78px;
   }
 
   .menuArrow {
     background: #9ec4e7;
+    border: none;
     color: white;
-    width: 81px;
-    height: 81px;
     float: right;
+    height: 81px;
+    outline: none;
     position: fixed;
     right: 0px;
-    outline: none;
-    border: none;
+    width: 81px;
   }
 
   .colorChange {
@@ -86,42 +87,42 @@
 
   .colorChangeImg {
     background: white;
-    color: #2774ae;
     border: 1px solid lightgray;
+    color: #2774ae;
   }
 
   .menu-normal {
-    transform: translateX(+100%);
-    transition: transform 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
+    transform: translateX(+100%);
+    transition: transform 0.4s ease-in-out;
   }
 
   .menu-normal.open {
-    transform: translateX(0);
-    width: 100%;
     animation: fadein 0.4s;
     display: flex;
     flex-direction: column;
+    transform: translateX(0);
+    width: 100%;
   }
 
   .sub-menu-normal {
+    flex-direction: column;
+    display: flex;
+    position: absolute;
     transform: translateX(+100%);
     transition: transform 0.4s ease-in-out;
-    position: absolute;
     top: 125px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
   }
 
   .sub-menu-normal.open {
-    transform: translateX(65px);
-    position: absolute;
-    top: 125px;
-    width: 100%;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 125px;
+    transform: translateX(65px);
+    width: 100%;
   }
 }
 
@@ -133,6 +134,7 @@
     overflow-x: auto;
     overflow-y: -webkit-paged-x;
   }
+
   html {
     width: 100%;
     /* background: url('../../assets/beach.jpeg'); */
@@ -141,15 +143,14 @@
   }
 
   body {
-    width: 100%;
     margin: 0px;
+    width: 100%;
   }
 
   ul {
-    padding-left: 0px;
-
     margin-top: 0px;
     margin-bottom: 0px;
+    padding-left: 0px;
     width: 100%;
   }
 
@@ -158,16 +159,16 @@
   }
 
   .mainMenuList {
-    width: 100%;
-    border-bottom: 1px solid #9ec4e7;
     background: #2774ae;
+    border-bottom: 1px solid #9ec4e7;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    list-style-type: none;
     height: 5em;
-    line-height: 5em;
     height: 81px;
+    line-height: 5em;
+    list-style-type: none;
+    width: 100%;
   }
 
   .listIconImg {
@@ -175,33 +176,33 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    height: 2.5em;
-    width: 2.5em;
     font-size: 14px;
+    height: 2.5em;
+    line-height: 2.5em;
     margin: 5px;
     margin-right: 20px;
-    line-height: 2.5em;
+    width: 2.5em;
   }
 
   .listIconButton {
-    border: none;
     background: #2774ae;
+    border: none;
     height: 5em;
-    width: 5em;
-    margin-right: 1.5em;
     outline: none;
+    margin-right: 1.5em;
+    width: 5em;
   }
 
   .menuArrow {
     background: #9ec4e7;
+    border: none;
     color: white;
-    width: 81px;
-    height: 81px;
     float: right;
+    height: 81px;
+    outline: none;
     position: fixed;
     right: 0px;
-    outline: none;
-    border: none;
+    width: 81px;
   }
 
   .colorChange {
@@ -212,49 +213,43 @@
 
   .colorChangeImg {
     background: white;
-    color: #2774ae;
     border: 1px solid lightgray;
+    color: #2774ae;
   }
 
   .menu-normal {
-    transform: translateX(+100%);
-    transition: transform 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
+    transform: translateX(+100%);
+    transition: transform 0.4s ease-in-out;
   }
 
   .menu-normal.open {
+    animation: fadein 0.4s;
+    flex-direction: column;
+    display: flex;
     transform: translateX(0);
     width: 100%;
-    animation: fadein 0.4s;
-    display: flex;
-    flex-direction: column;
   }
 
   .sub-menu-normal {
-    transform: translateX(+100%);
-    transition: transform 0.4s ease-in-out;
-    position: absolute;
-    top: 125px;
-    width: 100%;
-    height: 737px;
     display: flex;
     flex-direction: column;
+    height: 737px;
+    position: absolute;
+    transform: translateX(+100%);
+    transition: transform 0.4s ease-in-out;
+    top: 125px;
+    width: 100%;
   }
 
   .sub-menu-normal.open {
-    transform: translateX(65px);
-    position: absolute;
-    top: 125px;
-    width: 100%;
     display: flex;
     flex-direction: column;
-  }
-
-  .fillerMain {
-    height: 1000px;
-    background: #2774ae;
-    padding-top: 0px;
+    position: absolute;
+    transform: translateX(65px);
+    top: 125px;
+    width: 100%;
   }
 
   @keyframes fadein {

@@ -9,5 +9,5 @@ A mobile-first app demoing a multi-tiered menu built with React
 - From your terminal and in this projects root directory, run `npm start` to start the app at `localhost:3000` in the browser, works best in Chrome for now.
 - Have fun!
 
-### View of Menu
+### Mobile View of Menu
 ![multi-tier-menu](src/assets/react-air-ss.png)

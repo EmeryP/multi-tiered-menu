@@ -10,4 +10,4 @@ A mobile-first app demoing a multi-tiered menu built with React
 - Have fun!
 
 ### View of Menu
-![multi-tier-menu](src/assets/react-air-ss.png)
+![multi-tier-menu](src/assets/react-air-ss.png  =800x)

@@ -1,4 +1,9 @@
 @media screen and (min-width: 950px) {
+  #root {
+    overflow: -webkit-paged-x;
+    overflow-x: auto;
+    overflow-y: -webkit-paged-x;
+  }
   html {
     width: 100%;
     background: url('../../assets/beach.jpeg');
@@ -7,7 +12,6 @@
   }
 
   body {
-    overflow-x: hidden;
     width: 100%;
     margin: 0px;
   }
@@ -100,10 +104,11 @@
     position: absolute;
     top: 125px;
     width: 100%;
+    display: block;
   }
 
   .sub-menu-normal.open {
-    transform: translateX(75px);
+    transform: translateX(65px);
     position: absolute;
     top: 125px;
     width: 100%;
@@ -124,13 +129,22 @@
 /* below styles screen when width < 950px */
 
 @media screen and (max-width: 950px) {
+  /* #root {
+    overflow-x: hidden;
+  } */
+  #root {
+    overflow: -webkit-paged-x;
+    overflow-x: auto;
+    overflow-y: -webkit-paged-x;
+  }
   html {
     width: 100%;
+    background: url('../../assets/beach.jpeg');
+    height: 100vh;
+    background-size: cover;
   }
 
   body {
-    overflow-x: hidden;
-    overflow-y: scroll;
     width: 100%;
     margin: 0px;
   }
@@ -149,6 +163,7 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    list-style-type: none;
     height: 5em;
     line-height: 5em;
     height: 81px;
@@ -201,7 +216,7 @@
   }
 
   .menu-normal {
-    transform: translateX(-100%);
+    transform: translateX(+100%);
     transition: transform 0.4s ease-in-out;
   }
 
@@ -217,6 +232,7 @@
     position: absolute;
     top: 125px;
     width: 100%;
+    display: block;
   }
 
   .sub-menu-normal.open {

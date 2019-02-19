@@ -1,10 +1,10 @@
 @media screen and (min-width: 950px) {
+  
   html {
     width: 100%;
   }
 
   body {
-    overflow-y: hidden;
     width: 100%;
   }
 
@@ -133,7 +133,6 @@ html {
 }
 
 body {
-  overflow-y: hidden;
   width: 100%;
 }
 

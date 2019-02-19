@@ -8,3 +8,6 @@ An app built to demo a multi-tiered menu built with React
 - From your terminal and in the root direcotry, run `npm install` to install project dependencies
 - From your terminal and in the root direcotry, run `npm start` to start the app at `localhost:3000` in the browser, works best in chrome for now.
 - Have fun!
+
+### View of Menu
+![multi-tier-menu](src/assets/react-air-ss.png)

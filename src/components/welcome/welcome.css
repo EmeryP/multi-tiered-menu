@@ -3,16 +3,16 @@
     background: url('../../assets/bluesky.jpg') lightblue;
     background-size: cover;
     color: white;
+    display: none;
     font-family: 'Kalam', cursive;
     height: 48px;
-    display: none;
   }
 
   .welcome p {
-    padding-left: 20px;
+    font-size: 1.3em;
     line-height: 50px;
     margin: 0px;
-    font-size: 1.3em;
+    padding-left: 20px;
   }
 }
 @media screen and (max-width: 950px) {
@@ -22,8 +22,8 @@
     color: white;
     font-family: 'Kalam', cursive;
     font-size: 1.2em;
+    height: 100px;
     padding-top: 1.3em;
     padding-left: 1em;
-    height: 100px;
   }
 }

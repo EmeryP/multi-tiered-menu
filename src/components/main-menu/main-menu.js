@@ -108,7 +108,7 @@ export default class MainMenu extends React.Component {
       <React.Fragment>
         <div className={menuClass}>
           <Welcome />
-          <ul>
+          <ul className="mainUl">
             {mainMenu}
             <If condition={this.state.openSub && this.props.show}>
               <SubMenu
@@ -124,7 +124,6 @@ export default class MainMenu extends React.Component {
               />
             </If>
           </ul>
-          <div className="fillerMain" />
         </div>
       </React.Fragment>
     );

@@ -11,7 +11,6 @@ export default class Header extends React.Component {
           <span>
             <img src={logo} alt="" />
           </span>
-          <span className="welcomeHeader">welcomes you!</span>
           <div className="hamburgerMenu">
             <HamburgerMenu
               menuClicked={this.props.clickBurger}

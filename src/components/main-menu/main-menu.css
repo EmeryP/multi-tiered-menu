@@ -6,9 +6,9 @@
   }
   html {
     width: 100%;
-    background: url('../../assets/beach.jpeg');
-    height: 100vh;
-    background-size: cover;
+    /* background: url('../../assets/beach.jpeg'); */
+    /* height: 100vh;
+    background-size: cover; */
   }
 
   body {
@@ -25,6 +25,10 @@
     right: 0px;
     border-left: 1px solid #9ec4e7;
     border-top: 1px solid #9ec4e7;
+  }
+
+  .mainUl {
+    padding-bottom: 3em;
   }
 
   .mainMenuList {
@@ -89,13 +93,16 @@
   .menu-normal {
     transform: translateX(+100%);
     transition: transform 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
   }
 
   .menu-normal.open {
     transform: translateX(0);
     width: 100%;
     animation: fadein 0.4s;
-    /* transition: all 0.4s linear; */
+    display: flex;
+    flex-direction: column;
   }
 
   .sub-menu-normal {
@@ -104,7 +111,8 @@
     position: absolute;
     top: 125px;
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   .sub-menu-normal.open {
@@ -112,26 +120,14 @@
     position: absolute;
     top: 125px;
     width: 100%;
-    display: block;
-  }
-
-  .fillerMain {
-    height: 1000px;
-    background: #2774ae;
-    padding-top: 0px;
-    position: fixed;
-    z-index: -1;
-    right: 0px;
-    width: 40%;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 /* below styles screen when width < 950px */
 
 @media screen and (max-width: 950px) {
-  /* #root {
-    overflow-x: hidden;
-  } */
   #root {
     overflow: -webkit-paged-x;
     overflow-x: auto;
@@ -139,9 +135,9 @@
   }
   html {
     width: 100%;
-    background: url('../../assets/beach.jpeg');
-    height: 100vh;
-    background-size: cover;
+    /* background: url('../../assets/beach.jpeg'); */
+    /* height: 100vh; */
+    /* background-size: cover; */
   }
 
   body {
@@ -151,9 +147,14 @@
 
   ul {
     padding-left: 0px;
+
     margin-top: 0px;
     margin-bottom: 0px;
     width: 100%;
+  }
+
+  .mainUl {
+    padding-bottom: 3em;
   }
 
   .mainMenuList {
@@ -218,12 +219,16 @@
   .menu-normal {
     transform: translateX(+100%);
     transition: transform 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
   }
 
   .menu-normal.open {
     transform: translateX(0);
     width: 100%;
     animation: fadein 0.4s;
+    display: flex;
+    flex-direction: column;
   }
 
   .sub-menu-normal {
@@ -232,7 +237,9 @@
     position: absolute;
     top: 125px;
     width: 100%;
-    display: block;
+    height: 737px;
+    display: flex;
+    flex-direction: column;
   }
 
   .sub-menu-normal.open {
@@ -240,7 +247,8 @@
     position: absolute;
     top: 125px;
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   .fillerMain {

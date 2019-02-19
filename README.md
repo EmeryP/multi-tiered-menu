@@ -1,6 +1,6 @@
 # Multi-Tiered-Menu
 
-An app with a multi-tiered menu built with React
+An app built to demo a multi-tiered menu built with React
 
 ## Getting Started Locally
 
